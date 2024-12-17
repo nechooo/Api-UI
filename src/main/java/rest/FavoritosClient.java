@@ -106,6 +106,7 @@ public class FavoritosClient {
 		return favoritos;
 
     }
+	
 	public boolean savefavoritos(Favoritos favoritos) {
 
 		if (!Objects.isNull(favoritos.getIdFavorito()) && favoritos.getIdFavorito() != 0) {

@@ -16,22 +16,16 @@ import model.Administrador;
 import model.Hospital;
 import model.Recursos;
 import model.Tipo;
-
 public class administradorService {
 	UtilizadorService userservice= new UtilizadorService();
 	Scanner scanner = new Scanner(System.in);
 	private RestTemplate restTemplate = new RestTemplate();
 	private static final String rootAPIURL = "http://localhost:8080/api/administrador";
 	public List<Administrador> getAllAdministrador() {
-
 		ResponseEntity<Administrador[]> response = restTemplate.getForEntity(rootAPIURL, Administrador[].class);
-
 		List<Administrador> admins = new ArrayList<>();
-
 		if (response.getStatusCode().is2xxSuccessful()) {
-
 			if (response.getBody() != null) {
-
 				for (Administrador a : response.getBody()) {
 					admins.add(a);
 				}
@@ -43,7 +37,6 @@ public class administradorService {
 			System.out.println("Nothing found");
 		}
 		return admins;
-
 	}
 	public void menuAdministrador(Stage stage, int idAdmin) {
 	    Stage menuAdminStage = new Stage();

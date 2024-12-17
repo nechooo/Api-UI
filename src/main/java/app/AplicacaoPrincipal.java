@@ -19,9 +19,13 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 import java.util.List;
 
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties.Admin;
 //ADMIN
 //ADMIN DE RECURSO
+//ver doações de utilizador
+//notificações como lidas
+//confirmar eliminar utilizador
+//listar recursos, doações e favoritos (+) tem de ter filtros
+
 public class AplicacaoPrincipal extends Application {
 
     public Stage stagePrincipal;
